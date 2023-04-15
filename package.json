@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/config-lerna-scopes": "^17.4.2",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0",
+    "lerna": "^6.6.1",
+    "prettier": "^2.8.7"
+  },
+  "name": "grocery-app",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore . --fix",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "test": "lerna run test",
+    "test:watch": "lerna run test:watch",
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "private": true
+}
